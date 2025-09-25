@@ -11,8 +11,8 @@ export async function generateCV(linkedinUrl: string, content?: string) {
     if (linkedinUrl && !content) {
       const match = linkedinUrl.match(/linkedin\.com\/in\/([^/]+)/);
       const profileName = match ? match[1] : linkedinUrl;
-      //const data = await fetchLinkedinProfile(profileName);
-      //profileContent = JSON.stringify(data, null, 2);
+      const data = await fetchLinkedinProfile(profileName);
+      profileContent = JSON.stringify(data, null, 2);
     }
 
     const prompt = `
