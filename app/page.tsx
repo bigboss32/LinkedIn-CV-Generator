@@ -9,9 +9,16 @@ import URLInput from './components/URLInput';
 import { useMutation } from "convex/react";
 import { api } from "../convex/_generated/api";
 
+// 👇 definimos el tipo de lo que devuelve generateCV
+interface CVData {
+  rawContent: string;
+  htmlContent: string;
+  cssContent: string;
+}
+
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
-  const [cvData, setCvData] = useState<any>(null);
+  const [cvData, setCvData] = useState<CVData | null>(null);
 
   // 👇 hook para guardar en Convex
   const createCv = useMutation(api.cvs.createCv);
