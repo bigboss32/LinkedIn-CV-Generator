@@ -35,7 +35,7 @@ export async function fetchLinkedinProfile(profileName: string) {
 
     const pollData = await pollResp.json();
     if (pollData?.data?.profile) {
-      profileData = pollData.data.profile;
+      profileData = pollData.data;
       break;
     }
     await new Promise((resolve) => setTimeout(resolve, 5000));

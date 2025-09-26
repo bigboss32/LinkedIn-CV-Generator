@@ -22,14 +22,6 @@ export async function generateCV(linkedinUrl: string, content?: string) {
     Genera dos outputs separados:
     1. HTML: Estructura completa del CV con clases CSS
     2. CSS: Estilos responsive y profesionales
-
-    El CV debe incluir:
-    - Información personal
-    - Resumen profesional
-    - Experiencia laboral
-    - Educación
-    - Habilidades
-    - Diseño responsive y moderno
     `;
 
     const { text } = await generateText({

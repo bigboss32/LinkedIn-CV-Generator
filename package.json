@@ -11,9 +11,12 @@
   "dependencies": {
     "@ai-sdk/google": "^2.0.15",
     "@ai-sdk/openai": "^2.0.32",
+    "@react-pdf/renderer": "^4.3.1",
     "ai": "^5.0.48",
     "convex": "^1.27.2",
+    "file-saver": "^2.0.5",
     "html2canvas": "^1.4.1",
+    "html2pdf.js": "^0.12.1",
     "jspdf": "^3.0.3",
     "next": "15.5.3",
     "puppeteer": "^24.22.0",
